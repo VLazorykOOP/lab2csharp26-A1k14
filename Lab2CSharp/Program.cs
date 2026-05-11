@@ -196,11 +196,11 @@ namespace LabWork2
 
                 for (int i = 0; i < n; i++)
                 {
-                    Console.Write($"Введіть кількість елементів у рядку {i} (m > 0): ");
+                    Console.Write($"elements in a row {i} (m > 0): ");
                     int m;
                     while (!int.TryParse(Console.ReadLine(), out m) || m <= 0)
                     {
-                        Console.Write("Помилка. Введіть ціле додатне число: ");
+                        Console.Write("wrong ");
                     }
 
                     jaggedArray[i] = new int[m];
@@ -210,13 +210,13 @@ namespace LabWork2
                         maxColumns = m;
                     }
 
-                    Console.WriteLine($"Введіть елементи для рядка {i}:");
+                    Console.WriteLine($"elements for row{i}:");
                     for (int j = 0; j < m; j++)
                     {
                         Console.Write($"jaggedArray[{i}][{j}] = ");
                         while (!int.TryParse(Console.ReadLine(), out jaggedArray[i][j]))
                         {
-                            Console.Write("Помилка. Введіть ціле число: ");
+                            Console.Write("wrong ");
                         }
                     }
                 }
@@ -239,7 +239,7 @@ namespace LabWork2
                     resultColumns[col] = currentSum;
                 }
 
-                Console.WriteLine("\nРезультуючий масив сум парних додатних елементів по стовпцях:");
+                Console.WriteLine("\nThe resulting array of the sums of paired positive elements by column:");
                 for (int col = 0; col < maxColumns; col++)
                 {
                     Console.Write($"{resultColumns[col]} ");
@@ -248,7 +248,7 @@ namespace LabWork2
             }
             else
             {
-                Console.WriteLine("Помилка: кількість рядків має бути цілим додатним числом.");
+                Console.WriteLine("wrong");
             }
         }
     }
